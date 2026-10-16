@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dialog_info.xml - Ventana emergente con información de la aplicación -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <!-- Logo UJCV -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ujcv_logo"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Logo UJCV" />
+
+    <!-- Nombre y versión de la app -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domótica App Versión 1.0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#16213e"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Creado por -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creado por: [Tu Nombre]"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Clase -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clase: Programación Dispositivos Móviles"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Universidad -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UJCV"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#16213e"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Año -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2026"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+</LinearLayout>

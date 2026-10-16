@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_casa.xml - Pantalla de control general de la casa -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏠 Control de Casa"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón encender/apagar TODAS las luces -->
+        <Button
+            android:id="@+id/btnTodasLuces"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="💡 TODAS LAS LUCES"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#f39c12"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón encender/apagar TODOS los enchufes -->
+        <Button
+            android:id="@+id/btnTodosEnchufes"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🔌 TODOS LOS ENCHUFES"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#27ae60"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ==================== PRIMER PISO ==================== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— Primer Piso —"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3498db"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Card Primer Piso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Luz P1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnLuzP1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/luz_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Luz Primer Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luz"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+
+                <SeekBar
+                    android:id="@+id/seekLuzP1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Enchufe P1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnEnchufeP1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/enchufe_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Enchufe Primer Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enchufe"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ==================== SEGUNDO PISO ==================== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— Segundo Piso —"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#9b59b6"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnLuzP2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/luz_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Luz Segundo Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luz"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+
+                <SeekBar
+                    android:id="@+id/seekLuzP2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnEnchufeP2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/enchufe_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Enchufe Segundo Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enchufe"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ==================== TERCER PISO ==================== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— Tercer Piso —"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#e67e22"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnLuzP3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/luz_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Luz Tercer Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luz"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+
+                <SeekBar
+                    android:id="@+id/seekLuzP3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnEnchufeP3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/enchufe_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Enchufe Tercer Piso" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enchufe"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ==================== EXTERIOR Y GARAJE ==================== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— Exterior y Garaje —"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#e74c3c"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#16213e"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnLuzExt"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/luz_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Luz Exterior" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luz"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+
+                <SeekBar
+                    android:id="@+id/seekLuzExt"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btnEnchufeExt"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/enchufe_off"
+                    android:background="#0f3460"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Enchufe Exterior" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enchufe"
+                    android:textSize="13sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

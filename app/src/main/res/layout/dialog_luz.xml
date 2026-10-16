@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dialog_luz.xml - Ventana emergente para controlar intensidad y color de la luz -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Etiqueta de intensidad -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regular Intensidad"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="12dp" />
+
+    <!-- SeekBar para controlar intensidad (0-100%) -->
+    <SeekBar
+        android:id="@+id/seekBarIntensidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Texto que muestra el valor actual de intensidad -->
+    <TextView
+        android:id="@+id/tvIntensidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intensidad: 50%"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Etiqueta de colores -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Indicador de colores disponibles -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔴 Rojo | ⚪ Blanco | 🔵 Azul"
+        android:textSize="14sp"
+        android:textColor="#777777" />
+
+</LinearLayout>

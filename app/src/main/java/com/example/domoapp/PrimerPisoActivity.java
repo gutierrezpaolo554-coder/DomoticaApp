@@ -1,0 +1,79 @@
+package com.example.domoapp;
+
+import android.os.Bundle;
+import android.widget.ImageButton;
+import android.widget.SeekBar;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * PrimerPisoActivity - Control de luces y enchufes del Primer Piso (Sala)
+ * Con control de intensidad visual y SeekBar automático
+ */
+public class PrimerPisoActivity extends AppCompatActivity {
+
+    private ImageButton btnLuz, btnEnchufe;
+    private SeekBar seekLuz;
+    private boolean luzOn = false, enchufeOn = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_primer_piso);
+
+        btnLuz = findViewById(R.id.btnLuzP1);
+        btnEnchufe = findViewById(R.id.btnEnchufeP1);
+        seekLuz = findViewById(R.id.seekLuzP1);
+
+        // Click en botón de luz - enciende/apaga y mueve seekbar automáticamente
+        btnLuz.setOnClickListener(v -> {
+            luzOn = !luzOn;
+            seekLuz.setProgress(luzOn ? 100 : 0);  // SeekBar va al máximo o a cero
+            actualizarLuz();
+        });
+
+        // SeekBar de intensidad (control manual)
+        seekLuz.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (luzOn) {
+                    if (progress > 0) {
+                        btnLuz.setImageResource(R.drawable.luz_on);
+                        float alpha = 0.3f + (progress / 100f) * 0.7f;
+                        btnLuz.setAlpha(alpha);
+                    } else {
+                        btnLuz.setImageResource(R.drawable.luz_off);
+                        btnLuz.setAlpha(1.0f);
+                    }
+                }
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
+        // Click en botón de enchufe
+        btnEnchufe.setOnClickListener(v -> {
+            enchufeOn = !enchufeOn;
+            btnEnchufe.setImageResource(enchufeOn ? R.drawable.enchufe_on : R.drawable.enchufe_off);
+        });
+    }
+
+    /**
+     * Actualiza el estado visual de la luz
+     */
+    private void actualizarLuz() {
+        if (luzOn) {
+            btnLuz.setImageResource(R.drawable.luz_on);
+            int progress = seekLuz.getProgress();
+            if (progress > 0) {
+                float alpha = 0.3f + (progress / 100f) * 0.7f;
+                btnLuz.setAlpha(alpha);
+            } else {
+                btnLuz.setAlpha(1.0f);
+            }
+        } else {
+            btnLuz.setImageResource(R.drawable.luz_off);
+            btnLuz.setAlpha(1.0f);
+        }
+    }
+}
